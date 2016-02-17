@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 require 'radio3'
 if ARGV[0] == 'audios' then
   puts Radio3.get_audios(ARGV[1])

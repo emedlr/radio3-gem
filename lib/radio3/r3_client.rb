@@ -12,14 +12,11 @@ class R3Client
     if page then url = url+'?page='+page.to_s end
     response = HTTParty.get(url)
     JSON.parse(response.body)['page']
-
-
   end
 
   def get_audios(program_id)
     url = @base_url+'programas/'+program_id.to_s+'/audios.json'
     response = HTTParty.get(url)
     JSON.parse(response.body)['page']
-
   end
 end
